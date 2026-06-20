@@ -328,8 +328,75 @@
   }
   .d-fm-connector{ display:none; }
 }
-@media (max-width:720px){
-  .detail-stats{ gap:32px; }
-  .d-flow{ flex-direction:column; }
-  .d-flow-arrow{ transform:rotate(90deg); }
+
+/* ---- 平板/小桌面 ---- */
+@media (max-width:860px){
+  .detail-hero-inner{ padding:130px 32px 64px; }
+  .detail-title{ font-size:clamp(40px, 8vw, 64px); }
+  .detail-sub{ font-size:15px; }
+  .detail-stats{ gap:36px; }
+  .d-prose .lead{ font-size:19px; }
+  .d-h3{ font-size:20px; margin:48px 0 20px; }
+  .d-flow{ gap:14px; min-width:auto; flex-wrap:wrap; justify-content:center; }
+  .d-flow-node{ min-width:100px; padding:16px 18px; }
+  .d-flow-arrow{ font-size:14px; }
+}
+
+/* ---- 手机竖屏 ---- */
+@media (max-width:640px){
+  .detail-hero{ min-height:80vh; }
+  .detail-hero-inner{ padding:110px 20px 48px; }
+  .detail-back{ font-size:11px; margin-bottom:36px; }
+  .detail-meta{ font-size:10px; gap:10px; flex-wrap:wrap; margin-bottom:28px; }
+  .detail-title{ font-size:clamp(34px, 11vw, 50px); margin-bottom:24px; }
+  .detail-sub{ font-size:14px; line-height:1.75; margin-bottom:40px; }
+  .detail-stats{ gap:24px; padding-top:28px; flex-wrap:wrap; }
+  .dstat-num{ font-size:26px; }
+  .dstat-label{ font-size:10px; }
+
+  .d-section{ padding:64px 0; }
+  .section-head{ margin-bottom:44px; }
+  .section-title{ font-size:clamp(24px, 7vw, 32px); }
+
+  .d-prose{ margin-bottom:48px; }
+  .d-prose .lead{ font-size:17px; margin-bottom:20px; }
+  .d-prose p{ font-size:14px; line-height:1.75; margin-bottom:16px; }
+
+  .d-gallery{ gap:14px; margin-top:36px; }
+  .d-gallery-row{ grid-template-columns:1fr; gap:14px; }
+  .d-gallery-item{ aspect-ratio:1.5; }
+
+  .d-diagram{ padding:28px 16px; margin-bottom:48px; }
+  .d-flow{ flex-direction:column; gap:12px; min-width:auto; }
+  .d-flow-node{ width:100%; min-width:auto; padding:18px 20px; }
+  .d-flow-arrow{ transform:rotate(90deg); font-size:16px; }
+  .d-flow-label{ font-size:12px; }
+
+  .d-h3{ font-size:19px; margin:44px 0 18px; }
+  .d-rules{ gap:12px; margin-bottom:36px; }
+  .d-rule-card{ padding:22px 20px; }
+  .d-rule-game{ font-size:15px; }
+  .d-rule-cond{ font-size:12px; }
+  .d-hearts{ font-size:15px; }
+
+  .d-flowmap{ gap:14px; }
+  .d-fm-step{ padding:22px 20px; }
+  .d-fm-step h4{ font-size:15px; margin-bottom:10px; }
+  .d-fm-step p{ font-size:13px; }
+  .d-fm-num{ margin-bottom:16px; }
+
+  .d-note{ padding:24px 22px; margin-top:24px; }
+  .d-note p{ font-size:14px; line-height:1.75; }
+
+  .d-notes{ gap:14px; }
+  .d-note-card{ padding:28px 22px; }
+  .d-note-card h3{ font-size:18px; margin-bottom:14px; }
+  .d-note-card p{ font-size:13px; line-height:1.7; }
+
+  .d-pager{
+    flex-direction:column; gap:12px; margin-top:56px;
+  }
+  .d-pager-back, .d-pager-next{
+    width:100%; text-align:center; font-size:12px; padding:14px 20px;
+  }
 }
