@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WALK — 心情系统设计 / 刘洋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="detail.css">
+</head>
+<body>
+
+<!-- ============ 导航栏(子页面精简版) ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-mark">LY</span>
+      <span class="logo-text">刘洋 · Liu Yang</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#overview"><span class="nav-num">01</span>概览</a></li>
+      <li><a href="#mood"><span class="nav-num">02</span>心情系统</a></li>
+      <li><a href="#flow"><span class="nav-num">03</span>流程</a></li>
+      <li><a href="#design"><span class="nav-num">04</span>设计思路</a></li>
+    </ul>
+    <a href="index.html" class="nav-cta">← 返回作品集</a>
+  </div>
+</nav>
+
+<!-- ============ Hero ============ -->
+<header class="detail-hero" id="overview">
+  <div class="detail-hero-bg" aria-hidden="true">
+    <div class="detail-hero-photo"></div>
+    <div class="detail-hero-overlay"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-blob hero-blob-green"></div>
+    <div class="hero-blob hero-blob-blue"></div>
+  </div>
+  <div class="detail-hero-inner">
+    <a href="index.html" class="detail-back">← 返回作品集</a>
+    <div class="detail-meta">
+      <span class="detail-tag">CASE STUDY</span>
+      <span class="hero-dot"></span>
+      <span class="detail-tag">UNITY 2022.3 · 叙事小游戏合集</span>
+    </div>
+    <h1 class="detail-title">
+      WALK<br>
+      <em>心情心数系统</em>
+    </h1>
+    <p class="detail-sub">
+      一套贯穿 24 个场景的进度与情感反馈系统。
+      玩家的表现被量化为 1–3 心,驱动地图枢纽推进,
+      让"玩得好"和"走得远"成为同一件事。
+    </p>
+    <div class="detail-stats">
+      <div class="dstat"><span class="dstat-num">24</span><span class="dstat-label">场景</span></div>
+      <div class="dstat"><span class="dstat-num">12</span><span class="dstat-label">小游戏类型</span></div>
+      <div class="dstat"><span class="dstat-num">3</span><span class="dstat-label">心数评级</span></div>
+      <div class="dstat"><span class="dstat-num">1</span><span class="dstat-label">地图枢纽</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 01 项目概览 ============ -->
+<section class="d-section" id="overview-2">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">01 / OVERVIEW</span>
+      <h2 class="section-title">这是什么项目。</h2>
+    </div>
+    <div class="d-prose">
+      <p class="lead">
+        WALK 是一只名为"豆花"的狗狗的生命旅程。
+        24 个场景被叙事串成一条线,每段记忆里藏着一种轻量小游戏——
+        拼图、张力条、转时钟、填色、刮刮乐、接球、气泡……
+        玩家用这些隐喻动作,参与一次告别。
+      </p>
+      <p>
+        项目最大的挑战不在单个小游戏,而在于<strong>如何把十几种玩法缝成一条连贯的情感曲线</strong>。
+        我设计了一套"心情心数系统"作为骨架:每完成一个小游戏,按表现给 1–3 心,
+        心数累积驱动地图枢纽,枢纽再决定下一段旅程打开与否。
+        这样,玩家的"玩得好不好"和"故事能不能继续"被绑在了同一根线上。
+      </p>
+    </div>
+
+    <div class="d-gallery reveal">
+      <div class="d-gallery-row">
+        <img src="img/walk5.png" alt="WALK 场景 5" class="d-gallery-item">
+        <img src="img/walk6.png" alt="WALK 场景 6" class="d-gallery-item">
+      </div>
+      <div class="d-gallery-row">
+        <img src="img/walk7.png" alt="WALK 场景 7" class="d-gallery-item">
+        <img src="img/walk8.png" alt="WALK 场景 8" class="d-gallery-item">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 心情系统 ============ -->
+<section class="d-section d-section-alt" id="mood">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">02 / MOOD SYSTEM</span>
+      <h2 class="section-title">心情心数系统。</h2>
+      <p class="section-desc">一个静态类,管住全游戏的"表现 → 反馈 → 推进"链路。</p>
+    </div>
+
+    <!-- 系统架构图 -->
+    <div class="d-diagram reveal">
+      <div class="d-flow">
+        <div class="d-flow-node">
+          <span class="d-flow-icon">◎</span>
+          <span class="d-flow-label">小游戏开始</span>
+        </div>
+        <div class="d-flow-arrow">→</div>
+        <div class="d-flow-node d-flow-node-active">
+          <span class="d-flow-icon">⏱</span>
+          <span class="d-flow-label">计时 / 计分</span>
+        </div>
+        <div class="d-flow-arrow">→</div>
+        <div class="d-flow-node">
+          <span class="d-flow-icon">♥</span>
+          <span class="d-flow-label">评 1–3 心</span>
+        </div>
+        <div class="d-flow-arrow">→</div>
+        <div class="d-flow-node">
+          <span class="d-flow-icon">⌖</span>
+          <span class="d-flow-label">写入 MoodSystem</span>
+        </div>
+        <div class="d-flow-arrow">→</div>
+        <div class="d-flow-node d-flow-node-end">
+          <span class="d-flow-icon">◆</span>
+          <span class="d-flow-label">地图枢纽弹入</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 评级规则 -->
+    <h3 class="d-h3">评级规则 — 每种游戏有自己的刻度</h3>
+    <div class="d-rules">
+      <div class="d-rule-card reveal">
+        <div class="d-rule-head">
+          <span class="d-rule-game">拼图</span>
+          <span class="d-rule-type">按用时</span>
+        </div>
+        <div class="d-rule-rows">
+          <div class="d-rule-row"><span class="d-hearts">♥♥♥</span><span class="d-rule-cond">≤ 30 秒</span></div>
+          <div class="d-rule-row"><span class="d-hearts">♥♥</span><span class="d-rule-cond">≤ 60 秒</span></div>
+          <div class="d-rule-row"><span class="d-hearts">♥</span><span class="d-rule-cond">> 60 秒</span></div>
+        </div>
+      </div>
+      <div class="d-rule-card reveal" data-delay="80">
+        <div class="d-rule-head">
+          <span class="d-rule-game">张力条 Walk</span>
+          <span class="d-rule-type">按通关时间</span>
+        </div>
+        <div class="d-rule-rows">
+          <div class="d-rule-row"><span class="d-hearts">♥♥♥</span><span class="d-rule-cond">≤ 15 秒</span></div>
+          <div class="d-rule-row"><span class="d-hearts">♥♥</span><span class="d-rule-cond">≤ 20 秒</span></div>
+          <div class="d-rule-row"><span class="d-hearts">♥</span><span class="d-rule-cond">> 20 秒</span></div>
+        </div>
+      </div>
+      <div class="d-rule-card reveal" data-delay="160">
+        <div class="d-rule-head">
+          <span class="d-rule-game">接球</span>
+          <span class="d-rule-type">按剩余心情</span>
+        </div>
+        <div class="d-rule-rows">
+          <div class="d-rule-row"><span class="d-hearts">♥♥♥</span><span class="d-rule-cond">漏 0 次</span></div>
+          <div class="d-rule-row"><span class="d-hearts">♥♥</span><span class="d-rule-cond">漏 1 次</span></div>
+          <div class="d-rule-row"><span class="d-hearts">♥</span><span class="d-rule-cond">漏 2+ 次</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 03 流程 ============ -->
+<section class="d-section" id="flow">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">03 / FLOW</span>
+      <h2 class="section-title">地图枢纽如何驱动流程。</h2>
+    </div>
+
+    <div class="d-flowmap reveal">
+      <div class="d-fm-col">
+        <div class="d-fm-step">
+          <span class="d-fm-num">01</span>
+          <h4>记忆中枢 Scene 1.6</h4>
+          <p>两块记忆碎片闪烁,提示玩家可点。完成拼图 1(puzzle4)后,第二块碎片才开始闪烁。</p>
+        </div>
+      </div>
+      <div class="d-fm-connector"></div>
+      <div class="d-fm-col">
+        <div class="d-fm-step">
+          <span class="d-fm-num">02</span>
+          <h4>拼图 1 → Scene2</h4>
+          <p>点击碎片进入拼图。完成后 <code>GameProgress.puzzle4Done = true</code>,回到中枢。</p>
+        </div>
+      </div>
+      <div class="d-fm-connector"></div>
+      <div class="d-fm-col">
+        <div class="d-fm-step">
+          <span class="d-fm-num">03</span>
+          <h4>拼图 2 → Scene3</h4>
+          <p>第二块碎片亮起。完成后 <code>puzzle9Done = true</code>,触发门动画与对白。</p>
+        </div>
+      </div>
+      <div class="d-fm-connector"></div>
+      <div class="d-fm-col">
+        <div class="d-fm-step d-fm-step-end">
+          <span class="d-fm-num">04</span>
+          <h4>门 → SceneMap</h4>
+          <p>门闪烁可点。设置 <code>nextMapDestination</code>,进入地图枢纽,开始后续旅程。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-note reveal">
+      <span class="d-note-label">设计要点</span>
+      <p>
+        地图枢纽(SceneMap)不是简单跳转,而是<strong>一个情感反馈面板</strong>。
+        已完成关卡的地标用 pop-in 动画弹入,心情图标按心数显示(1/2/3 心对应三种表情)。
+        玩家能直观看到"自己玩得怎么样",而下一站由 <code>nextMapDestination</code> 静态变量动态决定,
+        让流程既有秩序,又不死板。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 设计思路 ============ -->
+<section class="d-section d-section-alt" id="design">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">04 / DESIGN NOTES</span>
+      <h2 class="section-title">为什么这么做。</h2>
+    </div>
+
+    <div class="d-notes">
+      <div class="d-note-card reveal">
+        <span class="d-note-num">01</span>
+        <h3>表现与进度绑定</h3>
+        <p>
+          传统的"通关即过"会让小游戏沦为走过场。
+          把表现量化为心数,再让心数影响地图反馈,
+          玩家就有了"想再试一次"的理由——不是为了卡关,而是为了那颗心。
+        </p>
+      </div>
+      <div class="d-note-card reveal" data-delay="80">
+        <span class="d-note-num">02</span>
+        <h3>实时预估,不只在终点</h3>
+        <p>
+          <code>GetEstimatedPuzzleStars()</code> 在玩家拼图过程中实时返回当前心数,
+          UI 上的心情图标会随用时从 3 心变 2 心再变 1 心。
+          这种"看得见的倒计时"制造了温和的紧张感,而不是终点才告知结果。
+        </p>
+      </div>
+      <div class="d-note-card reveal" data-delay="160">
+        <span class="d-note-num">03</span>
+        <h3>三种状态分开记录</h3>
+        <p>
+          <code>completedGames</code>、<code>poppedLandmarks</code>、<code>poppedMoods</code>
+          三个 HashSet 分开管"做完""地标弹过""心情弹过"。
+          这样回访地图时,已完成的地标不会再弹一次动画,但心情图标会保留——
+          既不啰嗦,也不抹掉玩家的成绩。
+        </p>
+      </div>
+      <div class="d-note-card reveal" data-delay="240">
+        <span class="d-note-num">04</span>
+        <h3>静态变量 + DontDestroyOnLoad</h3>
+        <p>
+          MoodSystem 是纯静态类,数据在进程内全局有效。
+          配合场景转场单例的 <code>DontDestroyOnLoad</code>,
+          24 个场景之间无需 PlayerPrefs 存档,就能无缝传递状态。
+          代价是退出游戏即丢失——对一个短篇叙事游戏来说,刚好够用。
+        </p>
+      </div>
+    </div>
+
+    <div class="d-pager reveal">
+      <a href="index.html" class="d-pager-back">← 返回作品集</a>
+      <a href="https://www.bandbbs.cn/resources/5443/" target="_blank" rel="noopener" class="d-pager-next">呆猫表盘 →</a>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

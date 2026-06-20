@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘洋 — 游戏系统策划 / Liu Yang</title>
+<meta name="description" content="刘洋,游戏系统策划。专注于玩法机制、数值平衡与原型实现。Unity / Godot 跨平台经验。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 噪点纹理叠加层 -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ 导航栏 ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-mark">LY</span>
+      <span class="logo-text">刘洋 · Liu Yang</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about"><span class="nav-num">01</span>简介</a></li>
+      <li><a href="#projects"><span class="nav-num">02</span>项目</a></li>
+      <li><a href="#strengths"><span class="nav-num">03</span>优势</a></li>
+      <li><a href="#contact"><span class="nav-num">04</span>联系</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">取得联系 →</a>
+  </div>
+</nav>
+
+<!-- ============ Hero ============ -->
+<header class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid"></div>
+    <div class="hero-daimao"></div>
+    <div class="hero-blob hero-blob-green"></div>
+    <div class="hero-blob hero-blob-blue"></div>
+    <div class="hero-blob hero-blob-warm"></div>
+    <div class="hero-line hero-line-1"></div>
+    <div class="hero-line hero-line-2"></div>
+    <div class="hero-paperplane"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-meta">
+      <span class="hero-tag">PORTFOLIO / 2026</span>
+      <span class="hero-dot"></span>
+      <span class="hero-tag">AVAILABLE FOR WORK</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line line-1">设计让人</span>
+      <span class="line line-2">沉浸的<em>玩法循环</em></span>
+    </h1>
+
+    <p class="hero-sub">
+      刘洋 · 游戏系统策划<span class="sep">/</span>从机制到原型,从数值到情感。<br>
+      以 Unity 与 Godot 落地想法,以系统思维打磨体验。
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">查看精选项目</a>
+      <a href="#about" class="btn btn-ghost">了解我 ↓</a>
+    </div>
+
+    <div class="hero-foot">
+      <div class="hero-stat">
+        <span class="stat-num">03</span>
+        <span class="stat-label">已发布项目</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-num">02</span>
+        <span class="stat-label">游戏引擎</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">迭代次数</span>
+      </div>
+      <div class="hero-scroll">
+        <span>SCROLL</span>
+        <span class="scroll-line"></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 01 简介 ============ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">01 / ABOUT</span>
+      <h2 class="section-title">关于我,与我的方式。</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="lead">
+          我是刘洋,一名游戏系统策划,正在寻找实习机会。
+          我喜欢琢磨机制背后的节奏——让玩家愿意再试一次,
+          让挑战与成长刚好能接上。
+        </p>
+        <p>
+          我的工作从一根机制的线头开始:一个核心循环、一组数值、一段节奏,
+          直到它能在屏幕上跑起来,被一只真实的手按下去。
+          我习惯亲手把想法做成原型,在 Unity 与 Godot 里反复试错,
+          而不是停留在文档与想象。
+        </p>
+        <p>
+          过去的项目覆盖叙事小游戏合集、2D 生存射击与智能穿戴 UI,
+          让我学会在不同平台与体量之间,找到系统设计的同一套底层语言。
+        </p>
+      </div>
+
+      <aside class="about-card reveal" data-delay="120">
+        <div class="card-row">
+          <span class="card-label">姓名</span>
+          <span class="card-value">刘洋 / Liu Yang</span>
+        </div>
+        <div class="card-row">
+          <span class="card-label">身份</span>
+          <span class="card-value">游戏系统策划</span>
+        </div>
+        <div class="card-row">
+          <span class="card-label">方向</span>
+          <span class="card-value">玩法机制 · 数值 · 原型</span>
+        </div>
+        <div class="card-row">
+          <span class="card-label">引擎</span>
+          <span class="card-value">Unity · Godot</span>
+        </div>
+        <div class="card-row">
+          <span class="card-label">平台</span>
+          <span class="card-value">PC · 移动 · 穿戴</span>
+        </div>
+        <div class="card-row">
+          <span class="card-label">状态</span>
+          <span class="card-value"><i class="dot-live"></i>开放合作机会</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 精选项目 ============ -->
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">02 / SELECTED WORK</span>
+      <h2 class="section-title">精选项目。</h2>
+      <p class="section-desc">三个不同体量与平台的作品,同一种系统思考。</p>
+    </div>
+
+    <div class="projects-list">
+
+      <!-- 项目 1 -->
+      <article class="project project-large reveal">
+        <a class="project-cover carousel" href="walk-detail.html" id="walkCarousel" aria-label="WALK 项目详情">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="img/walk1.png" alt="WALK 截图 1">
+            <img class="carousel-slide" src="img/walk2.png" alt="WALK 截图 2">
+            <img class="carousel-slide" src="img/walk3.png" alt="WALK 截图 3">
+            <img class="carousel-slide" src="img/walk4.png" alt="WALK 截图 4">
+          </div>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" data-slide="0" aria-label="第 1 张"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="第 2 张"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="第 3 张"></button>
+            <button class="carousel-dot" data-slide="3" aria-label="第 4 张"></button>
+          </div>
+          <span class="cover-badge">UNITY · 叙事</span>
+        </a>
+        <div class="project-body">
+          <div class="project-meta">
+            <span>2025</span><span class="meta-dot"></span><span>Unity 2022.3</span><span class="meta-dot"></span><span>个人项目</span>
+          </div>
+          <h3 class="project-title">WALK — 豆花的回忆之旅</h3>
+          <p class="project-desc">
+            一只名为"豆花"的狗狗的生命旅程。24 个场景、十几种轻量小游戏被叙事串成一条线,
+            玩家用拉窗帘、转时钟、擦照片等隐喻动作参与一段告别。
+          </p>
+          <ul class="project-points">
+            <li>设计<span class="hl">心情系统</span>:按用时与表现给 1–3 心,驱动地图枢纽推进</li>
+            <li>搭建<span class="hl">双转场单例</span>架构:黑场 / 白场异步加载,跨 24 场景无缝衔接</li>
+            <li>统一<span class="hl">打字机对话范式</span>:全项目复用,带随机 pitch 打字音效</li>
+            <li>12 类小游戏机制:拼图、张力条、时钟回忆、填色、刮刮乐、接球、气泡…</li>
+          </ul>
+          <div class="project-tags">
+            <span>系统设计</span><span>叙事节奏</span><span>UGUI</span><span>Timeline</span><span>场景流</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 2 -->
+      <article class="project project-large reveal" data-delay="120">
+        <a class="project-cover carousel" href="https://rainy-ocean.itch.io/kill-slime" target="_blank" rel="noopener" id="slimeCarousel" aria-label="Kill Slime 项目">
+          <div class="carousel-track">
+            <img class="carousel-slide active" src="img/slime1.png" alt="Kill Slime 截图 1">
+            <img class="carousel-slide" src="img/slime2.png" alt="Kill Slime 截图 2">
+            <img class="carousel-slide" src="img/slime3.png" alt="Kill Slime 截图 3">
+          </div>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" data-slide="0" aria-label="第 1 张"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="第 2 张"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="第 3 张"></button>
+          </div>
+          <span class="cover-badge">GODOT 4.5 · 像素射击</span>
+        </a>
+        <div class="project-body">
+          <div class="project-meta">
+            <span>2025</span><span class="meta-dot"></span><span>Godot 4.5</span><span class="meta-dot"></span><span>个人项目</span>
+          </div>
+          <h3 class="project-title">Kill Slime — 松鼠射击</h3>
+          <p class="project-desc">
+            2D 像素生存射击。核心创新是把<span class="hl">分数同时当作资源</span>——
+            射击、护盾、大招全部消耗分数,玩家在囤积与消费之间持续博弈。
+          </p>
+          <ul class="project-points">
+            <li>设计<span class="hl">分数=资源</span>核心循环,重塑攻防节奏与决策张力</li>
+            <li>Boss 三阶段攻击模式:追逐 / 横向扇形 / 纵向密集,每 4 秒切换</li>
+            <li>难度递增系统:史莱姆速度与生成频率随时间双轴提升</li>
+            <li>引入<span class="hl">大鼠弹球</span>作为混沌元素,可帮可害,增加涌现性</li>
+          </ul>
+          <div class="project-tags">
+            <span>核心循环</span><span>数值平衡</span><span>Boss AI</span><span>GDScript</span><span>难度曲线</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 3 -->
+      <article class="project project-large reveal" data-delay="240">
+        <a class="project-cover cover-watch-frame" href="https://www.bandbbs.cn/resources/5443/" target="_blank" rel="noopener" aria-label="呆猫表盘 项目">
+          <div class="watch-stage">
+            <img class="watch-img" src="img/shouhuan.webp" alt="呆猫表盘实物图">
+          </div>
+          <span class="cover-badge">穿戴 UI · 像素</span>
+        </a>
+        <div class="project-body">
+          <div class="project-meta">
+            <span>2026</span><span class="meta-dot"></span><span>小米手环 10</span><span class="meta-dot"></span><span>米坛社区发布</span>
+          </div>
+          <h3 class="project-title">呆猫表盘 — 小米手环 10</h3>
+          <p class="project-desc">
+            为受限的穿戴屏幕设计一套像素风呆猫主题 UI,
+            在信息密度与可读性之间做减法,同时保留性格。
+          </p>
+          <ul class="project-points">
+            <li>适配手环屏幕,完成<span class="hl">信息层级</span>与像素美学平衡</li>
+            <li>集成支付宝 / 微信支付 / 微信步数快捷入口</li>
+            <li>米坛社区 BandBBS 发布,持续迭代至 v3 版本</li>
+          </ul>
+          <div class="project-tags">
+            <span>穿戴 UI</span><span>信息架构</span><span>像素美术</span><span>适配</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 优势 ============ -->
+<section class="section strengths" id="strengths">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">03 / STRENGTHS</span>
+      <h2 class="section-title">我的方式。</h2>
+      <p class="section-desc">系统策划不是写文档,是让一个想法真正能跑起来。</p>
+    </div>
+
+    <div class="strength-grid">
+      <div class="strength-card reveal">
+        <span class="s-num">01</span>
+        <h3>系统思维</h3>
+        <p>从一根机制线头到完整循环:核心玩法、进度系统、经济闭环,彼此咬合而非堆砌。</p>
+      </div>
+      <div class="strength-card reveal" data-delay="80">
+        <span class="s-num">02</span>
+        <h3>数值与平衡</h3>
+        <p>用数值说话。难度曲线、资源经济、成长节奏,在试错里找到"恰好相抵"的那一点。</p>
+      </div>
+      <div class="strength-card reveal" data-delay="160">
+        <span class="s-num">03</span>
+        <h3>原型落地</h3>
+        <p>不停留在文档。亲手在 Unity 与 Godot 里把想法跑起来,让设计被一只真实的手验证。</p>
+      </div>
+      <div class="strength-card reveal" data-delay="240">
+        <span class="s-num">04</span>
+        <h3>叙事与节奏</h3>
+        <p>把情感写进交互。拉窗帘、转时钟、擦照片——让操作本身成为隐喻,把握情绪的留白。</p>
+      </div>
+      <div class="strength-card reveal" data-delay="320">
+        <span class="s-num">05</span>
+        <h3>跨平台适应</h3>
+        <p>PC、移动、穿戴,体量不同,系统设计的底层语言一致。懂得在不同约束下做取舍。</p>
+      </div>
+      <div class="strength-card reveal" data-delay="400">
+        <span class="s-num">06</span>
+        <h3>工程同理心</h3>
+        <p>读得懂代码,对得上话。设计的系统可落地、可扩展,不留给程序无解的边界。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 联系 ============ -->
+<footer class="contact" id="contact">
+  <div class="contact-bg" aria-hidden="true">
+    <div class="contact-grid"></div>
+    <div class="contact-glow"></div>
+    <div class="contact-dashu"></div>
+  </div>
+
+  <div class="contact-inner">
+    <div class="contact-head">
+      <span class="section-num">04 / CONTACT</span>
+      <h2 class="contact-title">让我们聊聊<br>下一个系统。</h2>
+      <p class="contact-sub">
+        无论是完整项目、一段机制原型,还是一次数值推演——<br>
+        我都乐意从一根线头开始,把它跑起来。
+      </p>
+    </div>
+
+    <div class="contact-grid-cards">
+      <a class="contact-card reveal" href="mailto:2960392970@qq.com">
+        <span class="cc-label">EMAIL</span>
+        <span class="cc-value">2960392970@qq.com</span>
+        <span class="cc-arrow">→</span>
+      </a>
+      <div class="contact-card reveal" data-delay="100">
+        <span class="cc-label">WECHAT</span>
+        <span class="cc-value">_-_ry_</span>
+        <span class="cc-arrow">·</span>
+      </div>
+      <a class="contact-card reveal" href="#" data-delay="200">
+        <span class="cc-label">PORTFOLIO</span>
+        <span class="cc-value">在线作品集</span>
+        <span class="cc-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="contact-foot">
+      <span>© 2026 刘洋 / Liu Yang</span>
+      <span class="foot-sep">·</span>
+      <span>Designed & built with care</span>
+      <span class="foot-sep">·</span>
+      <span>游戏系统策划</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
